@@ -1,0 +1,20 @@
+.card{
+    width: 20%;
+    height:max-content;
+}
+
+.product__title{
+    padding:0;
+}
+
+.card__image img{
+    height: 15rem;
+}
+
+.grid{
+    justify-content: flex-start;
+}
+
+.card{
+    margin: 0 1rem;
+}

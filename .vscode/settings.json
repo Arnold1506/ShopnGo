@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f6921d0b-0595-4494-91d1-004940d0db0a/resourceGroups/TestRun/providers/Microsoft.Web/sites/ccl-shop-project",
+    "appService.deploySubpath": "."
+}

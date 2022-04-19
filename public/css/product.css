@@ -1,0 +1,99 @@
+section{
+    padding:0 2rem;
+}
+
+#containerSlider {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 3rem;
+  box-sizing: border-box;
+}
+#containerSlider img {
+  width: 100%;
+  height: 140%;
+  text-align: center;
+  align-content: center;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+}
+
+h1
+{
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+h5{
+  color: rgb(47, 150, 52);
+}
+.containerClothing, .containerAccessories
+{
+    display: grid;
+    grid-gap: 70px 20px;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.box 
+{
+    width: 100%;
+    background-color: white;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+}
+.box:hover
+{
+    box-shadow: 1px 6px 3px 0 rgb(185, 185, 185);
+}
+.containerClothing img
+{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.containerAccessories img
+{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.details
+{
+    padding: 0 15px;
+    text-transform: capitalize;
+}
+.box a 
+{
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+.card{
+  width: 20%;
+}
+
+.product__title{
+  padding: 0;
+}
+
+@media (max-width: 732px) {
+  #containerSlider img {
+    height: 12em;
+  }
+}
+@media (max-width: 500px) {
+  #containerSlider img {
+    height: 10em;
+  }
+}

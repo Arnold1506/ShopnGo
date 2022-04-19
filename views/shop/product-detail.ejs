@@ -1,0 +1,41 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/product-details.css">
+        <!-- favicon -->
+        <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+        <!-- EXTERNAL LINKS -->
+        <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+<main>
+    <div class="main-container">
+        <div class="container">
+        <div class="image">
+            <img src="<%= product.imageUrl%>" alt="">
+        </div>
+            <div class="details-container">
+                <h1 class="title"><%= product.title%></h1>
+                <h4>Apple</h4>
+                <h3><%= product.price%></h3>
+                <h3>Description</h3>
+                <p><%= product.description%></p>
+                <div class="action">
+                    <% if (isAuthenticated) { %>
+                        <form action="/cart" method="post">
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                            <button class="btn" type="submit">Add to Cart</button>
+                            <input type="hidden" name="productId" value="<%= product._id %>">
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</main>
+
+<%- include('../includes/end.ejs') %>
