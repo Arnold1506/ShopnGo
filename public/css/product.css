@@ -36,9 +36,8 @@ h5{
 }
 .containerClothing, .containerAccessories
 {
-    display: grid;
-    grid-gap: 70px 20px;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-direction: row;
     width: 90%;
     margin: auto;
     padding-bottom: 40px;
@@ -46,11 +45,12 @@ h5{
 
 .box 
 {
-    width: 100%;
+    width: 15rem;
     background-color: white;
     align-content: center;
     border-radius: 10px;
     box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+    margin: 0 1rem;
 }
 .box:hover
 {
@@ -81,6 +81,11 @@ h5{
 
 .card{
   width: 20%;
+  margin: 3rem;
+}
+
+img{
+  height: 20rem;
 }
 
 .product__title{

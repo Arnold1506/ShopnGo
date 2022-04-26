@@ -18,6 +18,7 @@ exports.postAddProduct = (req, res, next) => {
   const imageUrl = req.body.imageUrl;
   const price = req.body.price;
   const description = req.body.description;
+  const brand=req.body.brand;
   const category=req.body.category;
   const errors=validationResult(req);
   if (!errors.isEmpty()) {
@@ -32,6 +33,7 @@ exports.postAddProduct = (req, res, next) => {
         imageUrl:imageUrl,
         price:price,
         description:description,
+        brand:brand,
       },
       errorMessage:errors.array()[0].msg,
       validationErrors:errors.array()
@@ -43,6 +45,7 @@ exports.postAddProduct = (req, res, next) => {
     price: price,
     description: description,
     imageUrl: imageUrl,
+    brand:brand,
     userId: req.user
   });
   product

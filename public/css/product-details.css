@@ -6,7 +6,11 @@ body {
 }
 
 .main-container {
-    padding-top: 80px;
+    border: 1px black solid;
+    box-shadow: 2px 2px 1rem black;
+    /* margin-top: 10rem; */
+    width: 80%;
+    margin: 10rem auto;
 }
 
 .container{
@@ -18,8 +22,11 @@ body {
 }
 
 .image {
-    width: 80%;
+    width: auto;
     margin: auto;
+    min-height: 5rem;
+    max-height: 20rem;
+    
 }
 
 .image img {

@@ -2,6 +2,7 @@ const http =require('http');
 const path = require('path');
 const express=require('express');
 
+require("dotenv").config();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
@@ -73,7 +74,15 @@ const MONGODB_URI =
   app.use(errorController.get404);
   
   mongoose
-    .connect(MONGODB_URI)
+    .connect("mongodb://"+process.env.COSMOSDB_HOST+":"+process.env.COSMOSDB_PORT+"/"+process.env.COSMOSDB_DBNAME+"?ssl=true&replicaSet=globaldb", {
+      auth: {
+        username: process.env.COSMOSDB_USER,
+        password: process.env.COSMOSDB_PASSWORD
+      },
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    retryWrites: false
+    })
     .then(result => {
       app.listen(port);
     })
